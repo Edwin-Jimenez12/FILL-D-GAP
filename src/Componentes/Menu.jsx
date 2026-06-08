@@ -52,7 +52,7 @@ function Menu() {
 
     
     return (
-        <div className="bg-[#262788] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.3)]">
+        <div className="bg-[#262788] sticky top-0 left-0 right-0 z-50 shadow-[0_2px_4px_rgba(0,0,0,0.4)]">
             <nav className="md:mx-10 mx-3 py-2 md:py-3 flex justify-between items-center md:gap-2">
                 <div>
                     <img src="/Redes-sociales.png" alt="IconMenu" className="md:w-15 w-10" /> 
