@@ -1,0 +1,95 @@
+import { useState } from 'react';
+import { HelpCircle, Users, UserPlus, Mail, Menu as IconMenu, X as CloseIcon } from 'lucide-react';
+
+function Menu() {
+    const [menuOpen, menusetOpen] = useState(false);
+
+    
+    if (menuOpen) {
+        return (
+            
+            <div className="bg-gray-900 min-h-screen w-full transition-all duration-300">
+                
+                <nav className="mx-3 py-2 flex justify-between items-center">
+                    <div>
+                        
+                        <img src="/Redes-sociales.png" alt="Logo Nuevo Menú" className="w-10" /> 
+                    </div>
+                    <div>
+                        <button 
+                            onClick={() => menusetOpen(false)} 
+                            className="text-white focus:outline-none flex items-center justify-center"
+                        >
+                            <CloseIcon className="h-10 w-auto" />
+                        </button>
+                    </div>
+                </nav>
+
+                
+                <div className="px-6 py-8">
+                    <ul className="flex flex-col gap-6 text-xl text-white">
+                        <li className="flex items-center gap-3 py-3 border-b border-gray-800 cursor-pointer">
+                            <HelpCircle className="w-6 h-6 text-blue-400" />
+                            ¿Cómo funciona?
+                        </li>
+                        <li className="flex items-center gap-3 py-3 border-b border-gray-800 cursor-pointer">
+                            <Users className="w-6 h-6 text-blue-400" />
+                            Sobre nosotros
+                        </li>
+                        <li className="flex items-center gap-3 py-3 border-b border-gray-800 cursor-pointer">
+                            <UserPlus className="w-6 h-6 text-blue-400" />
+                            Registro
+                        </li>
+                        <li className="flex items-center gap-3 py-3 cursor-pointer">
+                            <Mail className="w-6 h-6 text-blue-400" />
+                            Contáctanos
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        );
+    }
+
+    
+    return (
+        <div className="bg-[#262788] shadow-[0_4px_6px_-1px_rgba(0,0,0,0.3)]">
+            <nav className="md:mx-10 mx-3 py-2 md:py-3 flex justify-between items-center md:gap-2">
+                <div>
+                    <img src="/Redes-sociales.png" alt="IconMenu" className="md:w-15 w-10" /> 
+                </div>
+
+                {/* Menú de PC */}
+                <div className="hidden md:block">
+                    <ul className="md:flex md:gap-10 text-lg text-[#F8FCFB]">
+                        <li className="flex items-center gap-2 cursor-pointer transition duration-200 hover:scale-105">
+                            <HelpCircle className="w-5 h-5 text-blue-500" />
+                            ¿Cómo funciona?
+                        </li>
+                        <li className="flex items-center gap-2 cursor-pointer transition duration-200 hover:scale-105">
+                            <Users className="w-5 h-5 text-blue-500" />
+                            Sobre nosotros
+                        </li>
+                        <li className="flex items-center gap-2 cursor-pointer transition duration-200 hover:scale-105">
+                            <UserPlus className="w-5 h-5 text-blue-500" />
+                            Registro
+                        </li>
+                        <li className="flex items-center gap-2 cursor-pointer transition duration-200 hover:scale-105">
+                            <Mail className="w-5 h-5 text-blue-500" />
+                            Contáctanos
+                        </li>
+                    </ul>
+                </div>
+                <div className="md:invisible">
+                    <button 
+                        onClick={() => menusetOpen(true)} 
+                        className="text-[#F8FCFB] focus:outline-none flex items-center justify-center"
+                    >
+                        <IconMenu className="h-10 w-auto" />
+                    </button>
+                </div>
+            </nav>
+        </div>
+    );
+}
+
+export default Menu;
