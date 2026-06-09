@@ -1,6 +1,7 @@
 import MENU from './Componentes/Menu.jsx'
 import BANNER from './Componentes/Bann-principal.jsx'
 import COMOFUNCIONA from './Componentes/Como-funciona.jsx'
+import BANNERFIN from './Componentes/banner-fin.jsx'
 function App() {
 
   return (
@@ -9,7 +10,9 @@ function App() {
         <MENU />
         <BANNER />
         <COMOFUNCIONA/>
+        <BANNERFIN/>
       </section>
+
     </>
   )
 }
