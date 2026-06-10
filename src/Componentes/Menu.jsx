@@ -8,7 +8,7 @@ function Menu() {
     if (menuOpen) {
         return (
             
-            <div className="bg-gray-900 min-h-screen w-full transition-all duration-300">
+            <div className="fixed bg-gray-900 min-h-screen w-full transition-all duration-300">
                 
                 <nav className="mx-3 py-2 flex justify-between items-center">
                     <div>
@@ -52,7 +52,7 @@ function Menu() {
 
     
     return (
-        <div className="bg-[#262788] sticky top-0 left-0 right-0 z-50 shadow-[0_2px_4px_rgba(0,0,0,0.4)]">
+        <div className="fixed bg-[#262788] sticky top-0 left-0 right-0 z-50 shadow-[0_2px_4px_rgba(0,0,0,0.4)]">
             <nav className="md:mx-10 mx-3 py-2 md:py-3 flex justify-between items-center md:gap-2">
                 <div>
                     <img src="/Redes-sociales.png" alt="IconMenu" className="md:w-15 w-10" /> 

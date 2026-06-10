@@ -1,9 +1,10 @@
-import { BicepsFlexed, Compass, Flame, Target} from 'lucide-react'
+import { BicepsFlexed, Compass, Flame, Target, Clock} from 'lucide-react'
 
-function ComoFunciona () {
+function Metas () {
     return (
-        <div className="flex flex-col items-center mt-16 px-4">
-            <h1 className="font-montserrat text-3xl font-bold mt-20 mb-16 bg-gradient-to-r from-[#E9478F] to-[#422C9B] bg-clip-text text-transparent md:text-4xl text-center">
+        <div className="flex flex-col items-center  px-4">
+            <h1 className="font-montserrat text-3xl font-bold mt-10 mb-16 bg-gradient-to-r 
+            from-[#E9478F] to-[#422C9B] bg-clip-text text-transparent md:text-4xl text-center">
                 ¡El futuro es tuyo!
             </h1>
             {/* Reconoces tu talento */}
@@ -26,9 +27,11 @@ function ComoFunciona () {
             {/* Independencia sobre permanencia */}
             <div className="flex flex-col items-center max-w-xl w-full bg-white p-6 rounded-2xl 
             shadow-sm border border-gray-100 mb-5">
-                <h2 className="font-montserrat text-xl text-center font-bold mb-3 text-[#262788] md:text-2xl">
+                <div className="max-w-sm">
+                    <h2 className="font-montserrat text-xl text-center font-bold mb-3 text-[#262788] md:text-2xl">
                     Independencia sobre permanencia
                 </h2>
+                </div>
                 <div className='flex items-center gap-4 w-full'>
                     <div className="flex items-center justify-center p-2 bg-[#E5F1FC] rounded-full text-[#262788] shrink-0">
                         <Compass className="w-17 h-17" />
@@ -73,8 +76,27 @@ function ComoFunciona () {
                     </p>
                 </div>
             </div>
+            {/* Dueño de tu Tiempo, Amante de tu Oficio */}
+            <div className="flex flex-col items-center max-w-xl w-full bg-white p-6 rounded-2xl 
+            shadow-sm border border-gray-100 mb-5">
+                <div className='max-w-xs text-center'>
+                    <h2 className="font-montserrat text-xl  font-bold mb-3 text-[#262788] md:text-2xl">
+                    Dueño de tu tiempo, amante de tu oficio
+                </h2>
+                </div>
+                <div className='flex items-center gap-4 w-full'>
+                    <div className="flex items-center justify-center p-2 bg-[#E5F1FC] rounded-full text-[#262788] shrink-0">
+                        <Clock className="w-17 h-17" />
+                    </div>
+                    <p className="font-montserrat text-sm text-gray-600 leading-relaxed pt-1">
+                        Manejar tus propios horarios no significa trabajar menos, significa trabajar mejor. 
+                        Eliges cuándo, dónde y cómo aportar tu valor, porque tu talento rinde más cuando 
+                        tú tienes el control de tu agenda.
+                    </p>
+                </div>
+            </div>
         </div>
     )
 }
 
-export default ComoFunciona;
+export default Metas;
