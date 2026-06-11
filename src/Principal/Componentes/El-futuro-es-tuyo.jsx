@@ -80,7 +80,7 @@ function Metas () {
             {/* Dueño de tu Tiempo, Amante de tu Oficio */}
             <div className="flex flex-col items-center max-w-xl w-full bg-white p-6 rounded-2xl py-5
             shadow-sm border border-gray-100 mb-5">
-                <div className='max-w-xs text-center'>
+                <div className='max-w-md text-center'>
                     <h2 className="font-montserrat text-xl  font-bold mb-3 text-[#262788] md:text-2xl">
                     Dueño de tu tiempo, amante de tu oficio
                 </h2>
