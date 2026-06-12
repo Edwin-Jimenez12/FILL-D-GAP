@@ -1,23 +1,24 @@
-function bannerPrincipal() {
-    return(
-        <div id='bannerPrincipal' className="bg-gradient-to-r from-[#422C9B] to-[#E9478F] py-5 rounded-b-lg 
-        flex flex-col items-start pl-5 gap-3 md:py-33">
-            <div className="font-montserrat text-lg text-white font-semibold
-            md:text-6xl">
-                <h1>Conectamos Organizaciones </h1>
-                <h1 className="md:mt-2 -mt-2">para generar un impacto</h1>
-                <h1 className="md:mt-2 -mt-2">sostenible.</h1>
+function BannerPrincipal() {
+    return (
+        <section id="bannerPrincipal" className="sticky top-[72px] z-10 h-[calc(100vh-72px)] overflow-hidden bg-[#D4FCF4] px-4 sm:px-6 lg:px-10 py-10 md:py-16">
+            <div className="mx-auto flex h-full max-w-6xl items-center">
+                <div className="w-full bg-[#262788] text-[#F8FCFB] px-6 py-10 md:px-10 md:py-14">
+                    <p className="font-montserrat text-sm uppercase tracking-[0.24em] text-[#FECF64] font-semibold mb-4">
+                        Comunidad Fill D Gap
+                    </p>
+                    <h1 className="font-montserrat text-3xl md:text-6xl font-bold leading-tight max-w-4xl">
+                        Cubrimos el puesto que falta para que tu empresa no se detenga.
+                    </h1>
+                    <p className="font-montserrat text-lg md:text-2xl mt-5 text-[#F8FCFB] max-w-3xl">
+                        Talento temporal, impacto continuo.
+                    </p>
+                    <p className="font-montserrat text-sm md:text-lg mt-4 max-w-3xl text-[#DFE4EA]">
+                        Conectamos empresas con profesionales seleccionados para cubrir necesidades temporales.
+                    </p>
+                </div>
             </div>
-            <div className="font-montserrat text-xs text-white
-            md:text-4xl">
-                <h2>Cubrimos el puesto que falta para que tu</h2>
-                <h2>empresa no se detenga.</h2>
-            </div>
-            <button className="bg-[#E9478F] font-montserrat rounded-2xl px-2 py-1 text-xs text-white italic font-semibold
-            md:text-3xl md:mt-5 rounded-3xl px-4 py-2 hover:bg-white hover:text-[#E9478F] md:font-bold hover:scale-105
-            md:transition md:duration-300 md:cursor-pointer">
-                Conocer más
-            </button>
-        </div>
+        </section>
     )
-}export default bannerPrincipal;
+}
+
+export default BannerPrincipal

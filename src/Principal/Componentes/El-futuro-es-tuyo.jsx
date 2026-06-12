@@ -1,104 +1,40 @@
-import { BicepsFlexed, Compass, Flame, Target, Clock} from 'lucide-react'
+import { CheckCircle2 } from 'lucide-react'
 
-function Metas () {
+const items = [
+    'Reconoces tu talento y tu valor profesional.',
+    'Buscas independencia, no permanencia.',
+    'Tus metas van primero.',
+    'Eres autónomo, eficiente y apasionado.',
+    'Valoras tu tiempo y disfrutas tu oficio.',
+]
+
+function Metas() {
     return (
-        <div id="futuro-tuyo" className="flex flex-col items-center mt-10 px-4 ">
-            <h1 className="font-montserrat text-3xl font-bold mt-10 mb-10 bg-gradient-to-r 
-            from-[#E9478F] to-[#422C9B] bg-clip-text text-transparent md:text-4xl text-center">
-                ¡El futuro es tuyo!
-            </h1>
-            <div className='flex flex-wrap items-center justify-center gap-6'>
-                {/* Reconoces tu talento */}
-            <div className="flex flex-col  items-center max-w-xl w-full bg-white p-6 rounded-2xl py-5
-            shadow-sm border border-gray-100 mb-5">
-                <h2 className="font-montserrat text-xl font-bold mb-3 text-[#262788] md:text-2xl">
-                    Reconoces tu talento
-                </h2>
-                <div className='flex items-center gap-4 w-full'>
-                    <div className="flex items-center justify-center p-2 bg-[#E5F1FC] rounded-full text-[#262788] shrink-0">
-                        <BicepsFlexed className="w-17 h-17" />
-                    </div>
-                    <p className="font-montserrat text-sm text-gray-600 leading-relaxed pt-1">
-                        Tus habilidades únicas, tus pasiones y tus metas personales no son simples 
-                        herramientas de trabajo; son el motor que te impulsa a crecer y el puente 
-                        para conectar con organizaciones.
+        <section id="futuro-tuyo" className="sticky top-[72px] z-20 h-[calc(100vh-1px)] overflow-hidden bg-[#FECF64] px-4 sm:px-6 lg:px-10 py-12 md:pb-30 md:pt-30">
+            <div className="mx-auto max-w-6xl">
+                <div className="max-w-3xl mb-20">
+                    <p className="font-montserrat text-sm uppercase tracking-[0.24em] text-[#262788] font-semibold mb-3">
+                        Encaja contigo
+                    </p>
+                    <h2 className="font-montserrat text-3xl md:text-5xl font-bold text-[#262788]">
+                        ¡El futuro es tuyo!
+                    </h2>
+                    <p className="font-montserrat text-base md:text-lg text-[#2B2B2B] mt-4">
+                        Si te identificas con esto, puedes formar parte de la comunidad.
                     </p>
                 </div>
-            </div>
-            {/* Independencia sobre permanencia */}
-            <div className="flex flex-col items-center max-w-xl w-full bg-white p-6 rounded-2xl py-5
-            shadow-sm border border-gray-100 mb-5">
-                <div className="">
-                    <h2 className="font-montserrat text-xl text-center font-bold mb-3 text-[#262788] md:text-2xl">
-                    Independencia sobre permanencia
-                </h2>
-                </div>
-                <div className='flex items-center gap-4 w-full'>
-                    <div className="flex items-center justify-center p-2 bg-[#E5F1FC] rounded-full text-[#262788] shrink-0">
-                        <Compass className="w-17 h-17" />
-                    </div>
-                    <p className="font-montserrat text-sm text-gray-600 leading-relaxed pt-1">
-                        Tu capacidad de decidir y avanzar con independencia vale más que la 
-                        simple permanencia; eres el motor de tu propio impacto, no un pasajero.
-                    </p>
+
+                <div className="grid gap-4 md:grid-cols-2">
+                    {items.map((item) => (
+                        <div key={item} className="bg-[#F8FCFB] border border-[#DFE4EA] px-5 py-5 flex gap-4 items-start">
+                            <CheckCircle2 className="w-6 h-6 text-[#262788] shrink-0 mt-0.5" />
+                            <p className="font-montserrat text-base text-[#2B2B2B] leading-relaxed">{item}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
-            {/* ¡Tus metas, tu prioridad! */}
-            <div className="flex flex-col items-center max-w-xl w-full bg-white p-6 rounded-2xl py-5
-            shadow-sm border border-gray-100 mb-5">
-                <h2 className="font-montserrat text-xl font-bold mb-3 text-[#262788] md:text-2xl">
-                    ¡Tus metas, tu prioridad!
-                </h2>
-                <div className='flex items-center gap-4 w-full'>
-                    <div className="flex items-center justify-center p-2 bg-[#E5F1FC] rounded-full text-[#262788] shrink-0">
-                        <Target className="w-17 h-17" />
-                    </div>
-                    <p className="font-montserrat text-sm text-gray-600 leading-relaxed pt-1">
-                        Poner tus metas como tu prioridad es el acto de valentía que define tu 
-                        éxito. No esperes a que el entorno decida por ti; diseña tu propio 
-                        norte y avanza con la certeza de que tu crecimiento no es negociable.
-                    </p>
-                </div>
-            </div>
-            {/* Autonomía, eficiencia y pasión */}
-            <div className="flex flex-col items-center max-w-xl w-full bg-white p-6 rounded-2xl py-5
-            shadow-sm border border-gray-100 mb-5">
-                <h2 className="font-montserrat text-xl font-bold mb-3 text-[#262788] md:text-2xl">
-                    Autonomía, eficiencia y pasión
-                </h2>
-                <div className='flex items-center gap-4 w-full'>
-                    <div className="flex items-center justify-center p-2 bg-[#E5F1FC] rounded-full text-[#262788] shrink-0">
-                        <Flame className="w-17 h-17" />
-                    </div>
-                    <p className="font-montserrat text-sm text-gray-600 leading-relaxed pt-1">
-                        Es lo que te diferencia del resto. No necesitas que te digan cómo brillar; 
-                        tu disciplina y el amor por tu trabajo son el combustible que 
-                        transforma cualquier reto en un resultado extraordinario.
-                    </p>
-                </div>
-            </div>
-            {/* Dueño de tu Tiempo, Amante de tu Oficio */}
-            <div className="flex flex-col items-center max-w-xl w-full bg-white p-6 rounded-2xl py-5
-            shadow-sm border border-gray-100 mb-5">
-                <div className='max-w-md text-center'>
-                    <h2 className="font-montserrat text-xl  font-bold mb-3 text-[#262788] md:text-2xl">
-                    Dueño de tu tiempo, amante de tu oficio
-                </h2>
-                </div>
-                <div className='flex items-center gap-4 w-full'>
-                    <div className="flex items-center justify-center p-2 bg-[#E5F1FC] rounded-full text-[#262788] shrink-0">
-                        <Clock className="w-17 h-17" />
-                    </div>
-                    <p className="font-montserrat text-sm text-gray-600 leading-relaxed pt-1">
-                        Manejar tus propios horarios no significa trabajar menos, significa trabajar mejor. 
-                        Eliges cuándo, dónde y cómo aportar tu valor, porque tu talento rinde más cuando 
-                        tú tienes el control de tu agenda.
-                    </p>
-                </div>
-            </div>
-            </div>
-        </div>
+        </section>
     )
 }
 
-export default Metas;
+export default Metas
